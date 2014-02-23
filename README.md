@@ -5,7 +5,7 @@ A Groovy AST to erase types, resetting them to `Object`, or `def`. It can be use
 
 types-b-gon provides a set of 3 annotations to erase types from methods. They can either erase a method return type, the method parameters type, or everything. 
 
-# `@Erase`
+## `@Erase`
 
 `@Erase` erases the type of a parameter. It can be applied individually to a parameter:
 
@@ -35,7 +35,7 @@ Or to a a method, erasing all the parameter types:
 
 Or to a class, erasing every parameter type from every method.
 
-# `@EraseReturn`
+## `@EraseReturn`
 
 Erase the return type of a method. When applied to a class, erase the return type from all methods:
 
@@ -50,7 +50,7 @@ Erase the return type of a method. When applied to a class, erase the return typ
 	
 	assert new Foo(date: 90).date == 90
 
-# `@EraseAll`
+## `@EraseAll`
 
 Erase return and parameter types from a method. When applied to a class, erase return and parameter types from every method : 
 
