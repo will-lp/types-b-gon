@@ -11,6 +11,10 @@ class EraseClosureTest extends GroovyTestCase {
 		 * FIXME: AST doesn't trigger for closure parameters???
 		 * 
 		 * http://www.jroller.com/aalmiray/entry/annotations_on_closure_parameters
+		 * 
+		 * Unanswered groovy-mailing question:
+		 * 
+		 * http://groovy.329449.n5.nabble.com/Closure-annotations-td5717326.html
 		 */
 		assertScript '''
 			
@@ -19,9 +23,9 @@ class EraseClosureTest extends GroovyTestCase {
 			list = ["a", [toUpperCase: { "AA" }]]
 			
 			def result = list.collect { 
-					@groovy.transform.ASTTest({ println "AAAAAAAAAH! $node.declaringClass" })
 					@E 
-					String it ->
+					//String 
+					it ->
 				it.toUpperCase()
 			}
 
