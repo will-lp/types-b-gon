@@ -60,6 +60,20 @@ class EraseReturnTest extends GroovyTestCase {
 		'''
 	}
 	
-	
+	void testReturnChange() {
+		assertScript '''	
+			import org.typesbgon.EraseReturn
+			
+			class Foo {
+				def date
+				@EraseReturn Date getDate() {
+					date
+				}
+			}
+			
+			assert new Foo(date: 90).date == 90
+			
+		'''
+	}
 
 }

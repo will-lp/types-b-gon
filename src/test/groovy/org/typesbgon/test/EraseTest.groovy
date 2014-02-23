@@ -157,4 +157,41 @@ class EraseTest extends GroovyTestCase {
 		}
 	}
 	
+	
+	void testUpperCase() {
+		
+		assertScript '''
+				import org.typesbgon.Erase
+	
+				class A {
+					def up(@Erase String s) {
+						s.toUpperCase()
+					}
+				}
+	
+				assert new A().up([ toUpperCase : { 'AAA' } ]) == 'AAA'
+		'''
+		
+	}
+	
+	
+	void testEraseMethod() {
+		
+		assertScript '''
+			import org.typesbgon.Erase as E
+
+			class Foo {
+				@E
+				def multiply(String a, Number n) {
+					a * n
+				}
+			}
+
+			assert new Foo().multiply(9, 9) == 81
+			assert new Foo().multiply('a', 3) == 'aaa'
+		'''
+		
+	}
+	
+	
 }
