@@ -32,6 +32,7 @@ Or to a a method, erasing all the parameter types:
 
 	assert new Foo().multiply(9, 9) == 81
 	assert new Foo().multiply('a', 3) == 'aaa'
+	assert new Foo().multiply(1.1, 2.2) == 2.42
 
 Or to a class, erasing every parameter type from every method.
 
@@ -72,3 +73,4 @@ TODO stuff:
 * Local AST annotations are not triggered in closure parameters
 * `@CompileStatic` is unsupported
 * Enable `@Erase` to fields
+* Support Groovy properties
