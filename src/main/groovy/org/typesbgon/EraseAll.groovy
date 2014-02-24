@@ -9,12 +9,12 @@ import org.codehaus.groovy.transform.GroovyASTTransformationClass;
 
 
 /**
- * Erases all types from both return and parameters
+ * Erases return and parameters types from methods.
  * 
  * Can be applied to:
- * - Method (erases both parameter types and the return type)
- * - Class (erases parameter types and the return type from every
- * method in the class)
+ * - Method (erases both parameter and return types)
+ * - Class (erases parameter and return types from every method 
+ * in the class)
  * 
  * @author will_lp
  *

@@ -8,8 +8,7 @@ import org.codehaus.groovy.transform.GroovyASTTransformationClass
 /**
  * Erases parameter types.
  * 
- * The transform of this annotation happens after TypeChecked/
- * CompileStatic events.
+ * The transform of this annotation happens after TypeChecked events.
  * 
  * Can be applied to:
  * - Parameters (erase the parameter type)

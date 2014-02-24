@@ -11,7 +11,12 @@ import org.codehaus.groovy.transform.GroovyASTTransformation
 import org.typesbgon.ast.util.ErrorHandler;
 import org.typesbgon.ast.util.TypeEraser;
 
-
+/**
+ * AST to erase types from methods and parameters
+ * 
+ * @author will_lp
+ *
+ */
 @GroovyASTTransformation
 class EraseAllAST implements ASTTransformation {
 

@@ -189,6 +189,7 @@ class EraseTest extends GroovyTestCase {
 
 			assert new Foo().multiply(9, 9) == 81
 			assert new Foo().multiply('a', 3) == 'aaa'
+			assert new Foo().multiply(1.1, 2.2) == 2.42
 		'''
 		
 	}

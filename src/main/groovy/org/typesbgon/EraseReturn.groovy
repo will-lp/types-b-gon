@@ -13,7 +13,7 @@ import org.codehaus.groovy.transform.GroovyASTTransformationClass
  * 
  * Can be applied to:
  * - Method (erases the return type of the method)
- * - Class (erases the return type from every method)
+ * - Class (erases the return type from every method in the class)
  * 
  * @author will_lp
  *
