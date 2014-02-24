@@ -1,13 +1,13 @@
 types-b-gon
 ===========
 
-A Groovy AST to erase types from methods, resetting them to `Object`, or `def`. It can be used to provide duck-typing without losing the refactor ability from the IDE or the `@TypeChecked` benefits. `@CompileStatic` is currently unsupported.
+A Groovy AST to erase types, resetting them to `Object`, or `def`. It can be used to provide duck-typing without losing the refactor ability from the IDE or the `@TypeChecked` benefits. `@CompileStatic` is currently unsupported. types-b-gon AST transformation happens after `@TypeChecked` phase.
 
 types-b-gon provides a set of 3 annotations to erase types from methods. They can either erase a method return type, the method parameters type, or everything. 
 
-==`@Erase`
+### `@Erase`
 
-`@Erase` erases the type of the parameters. It can be applied individually to a parameter:
+`@Erase` erases the type of a parameter. It can be applied individually to a parameter:
 
 	import org.typesbgon.Erase
 	
@@ -32,12 +32,13 @@ Or to a a method, erasing all the parameter types:
 
 	assert new Foo().multiply(9, 9) == 81
 	assert new Foo().multiply('a', 3) == 'aaa'
+	assert new Foo().multiply(1.1, 2.2) == 2.42
 
 Or to a class, erasing every parameter type from every method.
 
-==`@EraseReturn`
+### `@EraseReturn`
 
-Erase the return type of a method. Erase the return type from all methods when applied to a class:
+Erase the return type of a method. When applied to a class, erase the return type from all methods:
 
 	import org.typesbgon.EraseReturn
 	
@@ -50,9 +51,9 @@ Erase the return type of a method. Erase the return type from all methods when a
 	
 	assert new Foo(date: 90).date == 90
 
-==`@EraseAll`
+### `@EraseAll`
 
-Erase return and parameter types from a method. Erase return and parameter types from every method when applied to class: 
+Erase return and parameter types from a method. When applied to a class, erase return and parameter types from every method : 
 
 	class Foo {
 		@org.typesbgon.EraseAll
@@ -72,3 +73,4 @@ TODO stuff:
 * Local AST annotations are not triggered in closure parameters
 * `@CompileStatic` is unsupported
 * Enable `@Erase` to fields
+* Support Groovy properties
