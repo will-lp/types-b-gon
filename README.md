@@ -73,4 +73,4 @@ TODO stuff:
 * Local AST annotations are not triggered in closure parameters
 * `@CompileStatic` is unsupported
 * Enable `@Erase` to fields
-* Support Groovy properties
+* Upload to Maven central
