@@ -3,6 +3,8 @@ types-b-gon
 
 A Groovy AST to erase types, resetting them to `Object`, or `def`. It can be used to provide duck-typing without losing the refactor ability from the IDE or the `@TypeChecked` benefits. `@CompileStatic` is currently unsupported. types-b-gon AST transformation happens after `@TypeChecked` phase.
 
+You can download it from [build/libs](https://github.com/will-lp/types-b-gon/blob/master/build/libs/types-b-gon.jar?raw=true) folder.
+
 types-b-gon provides a set of 3 annotations to erase types from methods. They can either erase a method return type, the method parameters type, or everything. 
 
 ### `@Erase`
